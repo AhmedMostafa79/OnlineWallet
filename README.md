@@ -53,11 +53,11 @@ The application automatically seeds a **Manager account** on first run for syste
 ## 📋 Table of Contents
 
 - [Project Highlights](#-project-highlights)
-- [Skills Demonstrated](#-skills-demonstrated)
-- [Technical Architecture](#-technical-architecture)
-- [Class Diagrams](#-class-diagrams)
+- [Technical Achievements](#-technical-achievements)
+- [Technical Architecture](#️-technical-architecture)
+- [Class Diagrams & Database Schemas](#-class-diagrams--database-schemas)
 - [Core Features](#-core-features)
-- [Technology Stack](#-technology-stack)
+- [Technology Stack](#️-technology-stack)
 - [Design Patterns & Principles](#-design-patterns--principles)
 - [Project Structure](#-project-structure)
 - [Security Implementation](#-security-implementation)
@@ -67,13 +67,12 @@ The application automatically seeds a **Manager account** on first run for syste
 - [Testing Strategy](#-testing-strategy)
 - [Docker & Containerization](#-docker--containerization)
 - [Getting Started](#-getting-started)
-- [Configuration](#-configuration)
-- [Performance Metrics](#performance-metrics)
-- [Future Enhancements](#future-enhancements)
-
-- [Acknowledgments](#acknowledgments)
-
-- [Author & Contact](#author--contact)
+- [Configuration](#️-configuration)
+- [Performance Metrics](#-performance-metrics)
+- [Future Enhancements](#-future-enhancements)
+- [Author & Contact](#-author--contact)
+- [License](#-license)
+- [Acknowledgments](#-acknowledgments)
 ---
 
 ## 🎯 Project Highlights
@@ -94,7 +93,7 @@ This project showcases expertise in:
 
 ---
 
-## 💼 Technical Achievments
+## 💼 Technical Achievements
 
 **Through building this enterprise financial system, I've demonstrated practical experience with:**
 
