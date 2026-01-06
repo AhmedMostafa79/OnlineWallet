@@ -1,0 +1,12 @@
+{
+  "Version": 1,
+  "Hash": "Ue2H214Tp2UY0CUtx68xsJTSw6MKNKofsCY4duU2UCU=",
+  "Source": "OnlineWallet.API",
+  "BasePath": "_content/OnlineWallet.API",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": [],
+  "Endpoints": []
+}

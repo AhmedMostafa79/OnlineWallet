@@ -1,0 +1,506 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>OnlineWallet.API</name>
+    </assembly>
+    <members>
+        <member name="T:OnlineWallet.API.Controllers.AdminController">
+            <summary>
+            Controller for administrative operations
+            </summary>
+        </member>
+        <member name="M:OnlineWallet.API.Controllers.AdminController.#ctor(OnlineWallet.Application.Interfaces.IAdminService,OnlineWallet.Application.Interfaces.ITokenService,Microsoft.Extensions.Logging.ILogger{OnlineWallet.API.Controllers.AdminController})">
+            <summary>
+            Initializes a new instance of the AdminController
+            </summary>
+            <param name="adminService">The admin service</param>
+            <param name="logger">The logger instance</param>
+        </member>
+        <member name="M:OnlineWallet.API.Controllers.AdminController.CreateNewAdminAsync(OnlineWallet.Application.Models.RegisterModel)">
+            <summary>
+            Creates a new administrator user account.
+            </summary>
+            <remarks>
+            Creates a new administrator with the provided registration details.
+            Only users with Manager role are authorized to perform this action.
+            
+            Sample request:
+            POST /api/admin/newAdmin/create
+            Authorization: Bearer {manager-token}
+            Content-Type: application/json
+            
+            {
+              "email": "admin@example.com",
+              "password": "SecurePass123!",
+              "firstName": "John",
+              "lastName": "Doe",
+              "phoneNumber": "12345678901",
+              "dateOfBirth": "1990-01-01"
+            }
+            </remarks>
+            <param name="model">Administrator registration details</param>
+            <returns>Newly created administrator details</returns>
+            <response code="201">Returns the newly created admin user</response>
+            <response code="400">If the request data is invalid</response>
+            <response code="409">If the email is already registered</response>
+            <response code="401">If the request is not authenticated</response>
+            <response code="403">If the authenticated user is not a Manager</response>
+            <response code="500">If an unexpected error occurs</response>
+        </member>
+        <member name="M:OnlineWallet.API.Controllers.AdminController.GetAdminByIdAsync(System.Guid)">
+            <summary>
+            Retrieves a specific admin by ID
+            </summary>
+            <param name="adminId">The unique identifier of the admin</param>
+            <returns>Admin details</returns>
+            <remarks>
+            Sample request:
+                GET /api/admin/admin/{e19add5a-472c-46eb-be47-b3c40c691b62} 
+            </remarks> 
+            <response code="200">Returns the admin details</response>
+            <response code="400">Invalid admin ID</response>
+            <response code="401">User is not authenticated or authorized</response>
+            <response code="404">admin not found</response>
+            <response code="500">Internal server error</response>
+        </member>
+        <member name="M:OnlineWallet.API.Controllers.AdminController.DeleteAdminAsync(System.Guid)">
+            <summary>
+            Deletes an administrator user from the system
+            </summary>
+            <param name="adminId">The unique identifier of the admin to delete</param>
+            <returns>Success message</returns>
+            <remarks>
+            Sample request:
+            
+                DELETE /api/admin/12345678-1234-1234-1234-123456789abc
+                
+            Only users with Manager role can perform this operation.
+            </remarks>
+            <response code="200">Admin deleted successfully</response>
+            <response code="400">Invalid operation (e.g., cannot delete self)</response>
+            <response code="401">User is not authenticated or lacks Manager role</response>
+            <response code="404">Admin with specified ID is not found</response>
+            <response code="500">Internal server error</response>
+        </member>
+        <member name="M:OnlineWallet.API.Controllers.AdminController.UpdateAdminProfileAsync(OnlineWallet.Application.DTOs.UpdateUserDto)">
+            <summary>
+            Updates the admin's profile information
+            </summary>
+            <param name="updateRequest">The update request containing new profile data</param>
+            <returns>Success message</returns>
+            <remarks>
+            Sample request:
+            
+                PUT /api/admin/profile
+                {
+                   "firstName":"John",
+                   "lastName":"Doe"
+                }
+            </remarks> 
+            <response code="200">Profile updated successfully</response>
+            <response code="400">Invalid request data</response>
+            <response code="401">User is not authenticated or authorized</response>
+            <response code="404">Admin is not found</response>
+            <response code="500">Internal server error</response>
+        </member>
+        <member name="M:OnlineWallet.API.Controllers.AdminController.GetAllCustomersAsync">
+            <summary>
+            Retrieves all customers in the system
+            </summary>
+            <returns>List of all customers</returns>
+            <response code="200">Returns list of customers</response>
+            <response code="401">User is not authenticated or authorized</response>
+            <response code="500">Internal server error</response>
+        </member>
+        <member name="M:OnlineWallet.API.Controllers.AdminController.GetCustomerByIdAsync(System.Guid)">
+            <summary>
+            Retrieves a specific customer by ID
+            </summary>
+            <param name="customerId">The unique identifier of the customer</param>
+            <returns>Customer details</returns>
+            <remarks>
+            Sample request:
+                GET /api/admin/customer/{e19add5a-472c-46eb-be47-b3c40c691b62} 
+            </remarks> 
+            <response code="200">Returns the customer details</response>
+            <response code="400">Invalid customer ID</response>
+            <response code="401">User is not authenticated or authorized</response>
+            <response code="404">Customer not found</response>
+            <response code="500">Internal server error</response>
+        </member>
+        <member name="M:OnlineWallet.API.Controllers.AdminController.DeleteCustomerAsync(System.Guid)">
+            <summary>
+            Deletes specific customer from the system
+            </summary>
+            <param name="customerId"></param>
+            <returns>Success message with deleted customer ID</returns>
+             <remarks>
+            Sample request:
+                DELETE /api/admin/customer/{e19add5a-472c-46eb-be47-b3c40c691b62} 
+            </remarks> 
+            <response code="200">Customer deleted successfully</response>
+            <response code="400">Invalid operation (e.g., customer has active accounts)</response>
+            <response code="401">User is not authenticated or authorized</response>
+            <response code="404">Customer not found</response>
+            <response code="500">Internal server error</response>
+        </member>
+        <member name="M:OnlineWallet.API.Controllers.AdminController.GetAccountByNumberAsync(System.Guid)">
+            <summary>
+            Retrieves an account by number
+            </summary>
+            <param name="accountNumber">The unique account number</param>
+            <returns>Account details</returns>
+            <remarks>
+            Sample request:
+                GET /api/admin/account/{e19add5a-472c-46eb-be47-b3c40c691b62} 
+            </remarks> 
+            <response code="200">Returns the account details</response>
+            <response code="401">User is not authenticated or authorized</response>
+            <response code="404">Account not found</response>
+            <response code="500">Internal server error</response>
+        </member>
+        <member name="M:OnlineWallet.API.Controllers.AdminController.GetAllAccountsAsync">
+            <summary>
+            Retrieves all accounts in the system
+            </summary>
+            <returns>List of all accounts</returns>
+            <response code="200">Returns list of accounts</response>
+            <response code="401">User is not authenticated or authorized</response>
+            <response code="500">Internal server error</response>
+        </member>
+        <member name="M:OnlineWallet.API.Controllers.AdminController.ActivateAccountAsync(System.Guid)">
+            <summary>
+            Activates an inactive account
+            </summary>
+            <param name="accountNumber">The account number to activate</param>
+            <returns>Success message with account number</returns>
+            <remarks>
+            Sample request:
+                PUT /api/admin/account/{e19add5a-472c-46eb-be47-b3c40c691b62}/activate 
+            </remarks> 
+            <response code="200">Account activated successfully</response>
+            <response code="400">Invalid operation (e.g., account is already active)</response>
+            <response code="401">User is not authenticated or authorized</response>
+            <response code="404">Account not found</response>
+            <response code="500">Internal server error</response>
+        </member>
+        <member name="M:OnlineWallet.API.Controllers.AdminController.DeactivateAccountAsync(System.Guid)">
+            <summary>
+            Deactivates an active account
+            </summary>
+            <param name="accountNumber">Account number to activate</param>
+            <returns>Success Message with account number</returns>
+            <remarks>
+            Sample request:
+                PUT /api/admin/account/{e19add5a-472c-46eb-be47-b3c40c691b62}/deactivate 
+            </remarks> 
+            <response code="200">Account deactivated successfully</response>
+            <response code="400">Invalid operation (e.g., account is already inactive)</response>
+            <response code="401">User is not authenticated or authorized</response>
+            <response code="404">Account not found</response>
+            <response code="500">Internal server error</response>
+        </member>
+        <member name="M:OnlineWallet.API.Controllers.AdminController.DepositToAccountAsync(OnlineWallet.Application.Models.TransferRequestModel)">
+            <summary>
+            Deposits amount of money to a specific account
+            </summary>
+            <param name="request">Deposit request model</param>
+            <returns>Success message with account number </returns>
+            <remarks>
+            Sample request:
+                POST /api/admin/account/deposit
+                {
+                    "toAccount":"e19add5a-472c-46eb-be47-b3c40c691b62",
+                    "amount":0.00
+                }
+            </remarks> 
+            /// <response code="200">Amount is deposited successfully to the account</response>
+            <response code="400">Invalid operation (e.g., account is inactive)</response>
+            <response code="401">User is not authenticated or authorized</response>
+            <response code="404">Account not found</response>
+            <response code="500">Internal server error</response>
+        </member>
+        <member name="M:OnlineWallet.API.Controllers.AdminController.DeleteAccountAsync(System.Guid)">
+            <summary>
+            Permanently deletes an account from the system
+            </summary>
+            <param name="accountNumber">The account number to delete</param>
+            <returns>Success message with deleted account number</returns>
+            <remarks>
+            Sample request:
+                DELETE /api/admin/account/{e19add5a-472c-46eb-be47-b3c40c691b62}
+            </remarks> 
+            <response code="200">Account deleted successfully</response>
+            <response code="400">Invalid operation</response>
+            <response code="401">User is not authenticated or authorized</response>
+            <response code="404">Account not found</response>
+            <response code="500">Internal server error</response>
+        </member>
+        <member name="M:OnlineWallet.API.Controllers.AdminController.GetAllAuditLogsAsync">
+            <summary>
+            Retrieves all audit logs in the system
+            </summary>
+            <returns>List of all audit logs</returns>
+            <response code="200">Returns list of audit logs</response>
+            <response code="401">User is not authenticated or authorized</response>
+            <response code="500">Internal server error</response>
+        </member>
+        <member name="M:OnlineWallet.API.Controllers.AdminController.GetUserAuditLogs(System.Guid)">
+            <summary>
+            Retrieves audit logs for a specific user
+            </summary>
+            <param name="userId">The unique identifier of the user</param>
+            <returns>List of audit logs for the specified user</returns>
+            <remarks>
+            Sample request:
+                GET /api/admin/audit-logs/users/{e19add5a-472c-46eb-be47-b3c40c691b62} 
+            </remarks> 
+            <response code="200">Returns list of user audit logs</response>
+            <response code="401">User is not authenticated or authorized</response>
+            <response code="404">User not found</response>
+            <response code="500">Internal server error</response>
+        </member>
+        <member name="M:OnlineWallet.API.Controllers.AdminController.GetAuditLogsByActionType(System.String)">
+            <summary>
+            Retrieves audit logs filtered by action type
+            </summary>
+            <param name="actionType">The type of audit log action to filter by</param>
+            <returns>List of audit logs for the specified action type</returns>
+            <remarks>
+            Sample request:
+                GET /api/admin/audit-logs/actions/{actionType}
+                {
+                   actionType:AuditLogActionType
+                }
+            </remarks> 
+            <response code="200">Returns list of filtered audit logs</response>
+            <response code="400">Invalid action type</response>
+            <response code="401">User is not authenticated or authorized</response>
+            <response code="404">No audit logs found for the specified action type</response>
+            <response code="500">Internal server error</response>
+        </member>
+        <member name="M:OnlineWallet.API.Controllers.AdminController.GetAuditLogActionTypes">
+            <summary>
+            Retrieves all available audit log action types
+            </summary>
+            <returns>Dictionary of action type IDs and names</returns>
+            <remarks>
+            Sample request:
+                GET /api/admin/audit-logs/action-types
+            </remarks>
+        </member>
+        <member name="T:OnlineWallet.API.Controllers.AuthenticationController">
+            <summary>
+            Controller for Register and Login
+            </summary>
+        </member>
+        <member name="M:OnlineWallet.API.Controllers.AuthenticationController.#ctor(OnlineWallet.Application.Interfaces.IAuthService,Microsoft.Extensions.Logging.ILogger{OnlineWallet.API.Controllers.AuthenticationController})">
+            <summary>
+            Initializes a new instance of AuthenticationController
+            </summary>
+            <param name="authService">The authentication service</param>
+            <param name="logger">The logger instance</param>
+        </member>
+        <member name="M:OnlineWallet.API.Controllers.AuthenticationController.RegisterAsync(OnlineWallet.Application.Models.RegisterModel)">
+            <summary>
+            Registers a new user
+            </summary>
+            <param name="model">The register model containing new user data</param>
+            <returns>User claims and jwt token</returns>
+            <remarks>
+            Sample request:
+            
+                POST /api/auth/register
+                {
+                    "email": "user@example.com",
+                    "password": "Password123!",
+                    "firstName": "John",
+                    "lastName": "Doe",
+                    "phoneNumber": "00123456789",
+                    dateOfBirth: "2025-12-14"
+                }
+            </remarks> 
+            <response code="200">User registered successfully</response>
+            <response code="400">Invalid model data</response>
+            <response code="500">Internal server error</response>
+        </member>
+        <member name="M:OnlineWallet.API.Controllers.AuthenticationController.LoginAsync(OnlineWallet.Application.Models.TokenRequestModel)">
+            <summary>
+            Authenticates an existing user
+            </summary>
+            <remarks>
+            Sample request:
+            
+                POST /api/auth/login
+                {
+                    "email": "user@example.com",
+                    "password": "Password123!",
+                }
+            </remarks>
+            <param name="model">Login request model</param>
+            <returns>User claims and jwt token</returns>
+            <response code="200">User authenticated successfully</response>
+            <response code="400">Invalid model data</response>
+            <response code="401">User is not authenticated or authorized</response>
+            <response code="404">User is not found</response>
+            <response code="500">Internal server error</response>
+        </member>
+        <member name="T:OnlineWallet.API.Controllers.CustomerController">
+            <summary>
+            Controller for customer operations
+            </summary>
+        </member>
+        <member name="M:OnlineWallet.API.Controllers.CustomerController.#ctor(OnlineWallet.Application.Interfaces.ICustomerService,Microsoft.Extensions.Logging.ILogger{OnlineWallet.API.Controllers.CustomerController})">
+            <summary>
+            Initializes a new instance of the CustomerController
+            </summary>
+            <param name="customerService">The customer service</param>
+            <param name="logger">The logger instance</param>
+        </member>
+        <member name="M:OnlineWallet.API.Controllers.CustomerController.GetMyProfileAsync">
+            <summary>
+            Retrieves customer profile
+            </summary>
+            <returns>Customer profile details</returns>
+            <response code="200">Returns the customer details</response>
+            <response code="401">User is not authenticated or authorized</response>
+            <response code="500">Internal server error</response>
+        </member>
+        <member name="M:OnlineWallet.API.Controllers.CustomerController.CreateAccountAsync">
+            <summary>
+            Creates the customer account
+            </summary>
+            <returns>The created account</returns>
+            <remarks> 
+            Sample request:
+                POST /api/customer/accounts
+                
+            </remarks> 
+            <response code="200">Account created successfully</response>
+            <response code="400">Invalid request</response>
+            <response code="401">User is not authenticated or authorized</response>
+            <response code="500">Internal server error</response>
+        </member>
+        <member name="M:OnlineWallet.API.Controllers.CustomerController.SetPrimaryAccount(System.Guid)">
+            <summary>
+            Sets a customer's primary account
+            </summary>
+            <param name="accountNumber">The account identifier to set as primary</param>
+            <returns>Success message and updated customer details</returns>
+            <remarks>
+            Sample request:
+            
+                PUT /api/customer/accounts/current
+            
+            </remarks>
+            <response code="200">Primary account successfully set</response>
+            <response code="400">Invalid request or business rule violation</response>
+            <response code="401">User is not authenticated or authorized</response>
+            <response code="404">Customer or account not found</response>
+            <response code="500">Internal server error</response>
+        </member>
+        <member name="M:OnlineWallet.API.Controllers.CustomerController.UpdateMyProfileAsync(OnlineWallet.Application.DTOs.UpdateUserDto)">
+            <summary>
+            Updates the customer's profile information
+            </summary>
+            <param name="updateRequest">The update request containing new profile data</param>
+            <returns>Success message</returns>
+            <remarks>
+            Sample request:
+            
+                PUT /api/customer/profile
+                {
+                   "firstName":"John",
+                   "lastName":"Doe"
+                }
+            </remarks> 
+            <response code="200">Profile updated successfully</response>
+            <response code="400">Invalid request data</response>
+            <response code="401">User is not authenticated or authorized</response>
+            <response code="404">Customer is not found</response>
+            <response code="500">Internal server error</response>
+        </member>
+        <member name="M:OnlineWallet.API.Controllers.CustomerController.GetMyCurrentAccountAsync">
+            <summary>
+            Retrieves current account
+            </summary>
+            <returns>Current account details</returns>
+            <remarks>
+            Sample request:
+                GET /api/customer/accounts/current
+            </remarks> 
+            <response code="200">Returns the current account details</response>
+            <response code="401">User is not authenticated or authorized</response>
+            <response code="404">User has no current account</response>
+            <response code="500">Internal server error</response>
+        </member>
+        <member name="M:OnlineWallet.API.Controllers.CustomerController.GetCurrentAccountBalanceAsync">
+            <summary>
+            Retrieves current account balance
+            </summary>
+            <returns>Current account balance</returns>
+            <remarks>
+            Sample request:
+                GET /api/customer/accounts/current/balance
+            </remarks> 
+            <response code="200">Returns the current account balance</response>
+            <response code="401">User is not authenticated or authorized</response>
+            <response code="404">User has no current account</response>
+            <response code="500">Internal server error</response>
+        </member>
+        <member name="M:OnlineWallet.API.Controllers.CustomerController.GetAllMyAccountsAsync">
+            <summary>
+            Retrieves all customer accounts
+            </summary>
+            <returns>List of all customer's accounts</returns>
+            <response code="200">Returns list of customer accounts</response>
+            <response code="401">User is not authenticated or authorized</response>
+            <response code="500">Internal server error</response>
+        </member>
+        <member name="M:OnlineWallet.API.Controllers.CustomerController.DeleteAccountAsync(System.Guid)">
+            <summary>
+            Permanently deletes one of customer accounts
+            </summary>
+            <param name="accountNumber">The account number to delete</param>
+            <returns>Success message with deleted account number</returns>
+            <remarks>
+            Sample request:
+                DELETE /api/customer/account/{e19add5a-472c-46eb-be47-b3c40c691b62}
+            </remarks> 
+            <response code="200">Account deleted successfully</response>
+            <response code="400">Invalid operation</response>
+            <response code="401">User is not authenticated or authorized</response>
+            <response code="404">Account not found</response>
+            <response code="500">Internal server error</response>
+        </member>
+        <member name="M:OnlineWallet.API.Controllers.CustomerController.GetMyTransactionsHistoryAsync">
+            <summary>
+            Retrieves customer's transaction history
+            </summary>
+            <returns>List of customer's transactions</returns>
+            <response code="200">Returns list of transactions</response>
+            <response code="401">User is not authenticated or authorized</response>
+            <response code="500">Internal server error</response>
+        </member>
+        <member name="M:OnlineWallet.API.Controllers.CustomerController.TransferFromMyAccountAsync(OnlineWallet.Application.Models.TransferRequestModel)">
+            <summary>
+            Deposits amount of money from customer's current account to a specific account
+            </summary>
+            <param name="request">Transfer request model</param>
+            <returns>Success message with account number </returns>
+            <remarks>
+            Sample request:
+                POST /api/customer/accounts/current/transfers
+                {
+                    "toAccount":"e19add5a-472c-46eb-be47-b3c40c691b62",
+                    "amount":0.00
+                }
+            </remarks> 
+            /// <response code="200">Amount is transferred successfully to the account</response>
+            <response code="400">Invalid operation (e.g.,one of the accounts is inactive)</response>
+            <response code="401">User is not authenticated or authorized</response>
+            <response code="404">Any of the accounts is not found</response>
+            <response code="500">Internal server error</response>
+        </member>
+    </members>
+</doc>

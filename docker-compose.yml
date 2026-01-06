@@ -1,0 +1,79 @@
+version: "3.8"
+
+services:
+  # 1. SQL Server Database
+  sqlserver:
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    container_name: onlinewallet-db
+    environment:
+      - ACCEPT_EULA=Y
+      - SA_PASSWORD=${SA_PASSWORD}
+      - MSSQL_PID=Express
+    # Only expose port for development - remove in production
+    ports:
+      - "1433:1433"
+    volumes:
+      - sqlserver-data:/var/opt/mssql
+    healthcheck:
+      test: ["CMD-SHELL", "/opt/mssql-tools18/bin/sqlcmd -S localhost -U sa -P ${SA_PASSWORD} -C -Q 'SELECT 1' || exit 1"]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+      start_period: 60s
+    networks:
+      - onlinewallet-network
+    restart: unless-stopped
+  
+  # 2. Redis Cache
+  redis:
+    image: redis:7-alpine
+    container_name: onlinewallet-redis
+    # Only expose port for development - remove in production
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis-data:/data
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    networks:
+      - onlinewallet-network
+    restart: unless-stopped
+
+  # 3. Main Application
+  online-wallet:
+    container_name: onlinewallet-app
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8080:8080"
+    environment:
+      - ASPNETCORE_ENVIRONMENT=${ASPNETCORE_ENVIRONMENT:-Production}
+      - ASPNETCORE_URLS=http://+:8080
+      - ConnectionStrings__DefaultConnection=Server=sqlserver;Database=${DB_NAME:-OnlineWalletDb};User Id=sa;Password=${SA_PASSWORD};TrustServerCertificate=True
+      - ConnectionStrings__Redis=redis:6379,abortConnect=false
+      - JWT__Key=${JWT_KEY}
+      - JWT__Issuer=${JWT_ISSUER}
+      - JWT__Audience=${JWT_AUDIENCE}
+      - JWT__DurationInMinutes=${JWT_DURATION:-15}
+    depends_on:
+      sqlserver:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+    networks:
+      - onlinewallet-network
+    restart: unless-stopped
+
+# Define named volumes for data persistence
+volumes:
+  sqlserver-data:
+  redis-data:
+
+# Define custom network
+networks:
+  onlinewallet-network:
+    driver: bridge

@@ -1,0 +1,6 @@
+@OnlineWallet.API_HostAddress = http://localhost:5118
+
+GET {{OnlineWallet.API_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\OnlineWallet.API.props" />
+</Project>

@@ -1,0 +1,43 @@
+# Ignore build outputs
+**/bin/
+**/obj/
+**/out/
+
+# Ignore Visual Studio files
+**/.vs/
+**/.vscode/
+*.user
+*.suo
+*.cache
+
+# Ignore Git files
+.git/
+.gitignore
+.gitattributes
+
+# Ignore documentation and markdown
+*.md
+README.md
+
+# Ignore test results
+**/TestResults/
+
+# Ignore packages
+**/packages/
+
+# Ignore Docker files
+**/.dockerignore
+**/docker-compose*
+**/Dockerfile*
+
+# Ignore temp files
+**/*.tmp
+**/.DS_Store
+**/Thumbs.db
+
+# Ignore sensitive files
+**/.env
+**/*.pfx
+**/*.p12
+
+

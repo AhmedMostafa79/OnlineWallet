@@ -1,0 +1,6 @@
+{
+  "OnlineWallet.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "C:\\Users\\J.AHMED\\source\\repos\\C#\\OnlineWallet\\src\\OnlineWallet.API",
+  "OnlineWallet.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "C:\\Users\\J.AHMED\\source\\repos\\C#\\OnlineWallet\\src\\OnlineWallet.Application",
+  "OnlineWallet.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "C:\\Users\\J.AHMED\\source\\repos\\C#\\OnlineWallet\\src\\OnlineWallet.Domain",
+  "OnlineWallet.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "C:\\Users\\J.AHMED\\source\\repos\\C#\\OnlineWallet\\src\\OnlineWallet.Infrastructure"
+}
