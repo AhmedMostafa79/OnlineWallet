@@ -302,12 +302,10 @@ namespace OnlineWallet.Application.Models
             {
                 throw new UnauthorizedAccessException($"customer {customerId} doesn't own account {accountNumber}");
             }
+
             try
             {
                 User customer=await _unitOfWork.UsersRepository.GetByIdAsync(customerId);
-                if (customer == null)
-                    throw new KeyNotFoundException($"Customer with ID {customerId} not found.");
-                    
                 customer.CurrentAccountNumber = accountNumber;
                 await _unitOfWork.SaveChangesAsync();
                 return new GetUserDto
@@ -443,9 +441,6 @@ namespace OnlineWallet.Application.Models
             try
             {
                 User customer = await _unitOfWork.UsersRepository.GetByIdAsync(account.OwnerId);
-                if (customer == null)
-                    throw new KeyNotFoundException($"Customer with ID {account.OwnerId} not found.");
-                    
                 await _accountService.DeleteAccountAsync(accountId,false);
 
                 if (accountId == customer.CurrentAccountNumber)
@@ -456,7 +451,7 @@ namespace OnlineWallet.Application.Models
                    id: Guid.NewGuid(),
                   performedBy: customer.Id,
                   actionType: AuditLogActionType.CustomerAccountDeletion,
-                  status:  AuditLogStatus.Success ,
+                  status:  AuditLogStatus.Success,
                   details:  $"Customer with ID {account.OwnerId} successfully deleted account with ID {accountId}",
                   createdAt: DateTime.UtcNow
                   ), saveChanges: false);
@@ -470,7 +465,7 @@ namespace OnlineWallet.Application.Models
             catch (Exception ex)
             {
                 await _unitOfWork.RollbackTransactionAsync();
-                throw new InvalidOperationException($"Failed to delete account with ID {accountId}",ex);
+                throw new Exception($"Failed to delete account with ID {accountId}",ex);
             }
             
         }

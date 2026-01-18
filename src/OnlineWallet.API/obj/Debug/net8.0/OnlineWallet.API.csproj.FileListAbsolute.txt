@@ -410,3 +410,4 @@ C:\Users\J.AHMED\source\repos\C#\OnlineWallet\src\OnlineWallet.API\obj\Debug\net
 C:\Users\J.AHMED\source\repos\C#\OnlineWallet\src\OnlineWallet.API\obj\Debug\net8.0\OnlineWallet.API.genruntimeconfig.cache
 C:\Users\J.AHMED\source\repos\C#\OnlineWallet\src\OnlineWallet.API\obj\Debug\net8.0\ref\OnlineWallet.API.dll
 C:\Users\J.AHMED\source\repos\C#\OnlineWallet\src\OnlineWallet.API\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
+C:\Users\J.AHMED\source\repos\C#\OnlineWallet\src\OnlineWallet.API\obj\Debug\net8.0\OnlineWallet.API.sourcelink.json

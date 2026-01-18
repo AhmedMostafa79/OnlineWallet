@@ -132,6 +132,7 @@ namespace OnlineWallet.Domain.Models
             CreatedAt =DateTime.UtcNow;
             Role = role;
         }
+
         /// <summary>
         /// Validates email format using Gmail-style regex pattern
         /// </summary>
@@ -171,6 +172,7 @@ namespace OnlineWallet.Domain.Models
                 if ((cleaned.Length!= phoneNumberLength))
                     throw new ArgumentException("Phone number must be exactly 11 digits");
         }
+
         /// <summary>
         /// Validates name fields (first and last name)
         /// </summary>
@@ -184,7 +186,8 @@ namespace OnlineWallet.Domain.Models
 
             if (name.Trim().Length < 2)
                 throw new ArgumentException($"{fieldName} must be at least 2 characters long");
-        }
+        }       
+
         /// <summary>
         /// Validates user is at least MinimumAge (18) years old
         /// </summary>

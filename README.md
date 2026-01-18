@@ -87,7 +87,7 @@ This project showcases expertise in:
 - ✅ **Transaction Management** - ACID compliance with Serializable isolation levels for critical operations
 - ✅ **Comprehensive Audit Logging** - Complete audit trail for all financial operations and administrative actions
 - ✅ **Role-Based Access Control** - Three-tier authorization (Customer, Admin, Manager)
-- ✅ **Advanced Security** - JWT authentication, BCrypt password hashing, and endpoint rate limiting
+- ✅ **Advanced Security** - JWT authentication, PBKDF2-HMAC-SHA256 password hashing, and endpoint rate limiting
 - ✅ **Docker Containerization** - Multi-container architecture with Docker Compose orchestration
 - ✅ **Production-Ready** - Health checks, structured logging, error handling, and Swagger documentation
 
@@ -107,7 +107,7 @@ This project showcases expertise in:
 - Repository & Unit of Work patterns, CQRS principles
 
 ### Security & Performance
-- JWT authentication, BCrypt hashing, role-based authorization
+- JWT authentication, PBKDF2-HMAC-SHA256 hashing (ASP.NET Core Identity), role-based authorization
 - Redis caching (Decorator Pattern), rate limiting, audit logging
 
 ### Quality Assurance
@@ -269,7 +269,7 @@ The physical schema diagram shows the actual database implementation details inc
   - **Customer** - Standard users with account and transaction capabilities
   - **Admin** - System administrators with user management capabilities
   - **Manager** - Super administrators who can manage other admins
-- **Password Security** - BCrypt hashing with automatic validation against strong password policy
+- **Password Security** - PBKDF2-HMAC-SHA256 hashing (ASP.NET Core Identity PasswordHasher) with automatic salt generation and 10,000 iterations
 
 ### 💰 Account Management
 
@@ -345,7 +345,7 @@ The physical schema diagram shows the actual database implementation details inc
 
 ### Security & Authentication
 - **JWT Bearer Authentication** - Token-based stateless authentication
-- **BCrypt.NET** - Industry-standard password hashing
+- **ASP.NET Core Identity PasswordHasher** - PBKDF2-HMAC-SHA256 password hashing with automatic salt generation
 - **AspNetCoreRateLimit** - Middleware for IP and endpoint-based rate limiting
 
 ### API Documentation
@@ -510,7 +510,7 @@ OnlineWallet/
 │   │   ├── AuditLogService.cs                 # Audit logging implementation
 │   │   ├── AuthService.cs                     # Authentication implementation
 │   │   ├── CustomerService.cs                 # Customer operations implementation
-│   │   ├── HashService.cs                     # BCrypt password hashing
+│   │   ├── HashService.cs                     # PBKDF2-HMAC-SHA256 password hashing (ASP.NET Core Identity)
 │   │   ├── NotificationService.cs             # Notification service (future: email/SMS)
 │   │   ├── TokenService.cs                    # Token management service
 │   │   └── TokenStrategies/
@@ -590,7 +590,7 @@ User → POST /api/authentication/register
      ↓
 [Validation] → Email format, Strong password, Age ≥ 18
      ↓
-[BCrypt Hash] → Password hashing (work factor: 12)
+[PBKDF2 Hash] → Password hashing (HMAC-SHA256, 10,000 iterations)
      ↓
 [Database] → User created with Customer role
      ↓
@@ -632,7 +632,11 @@ Response: { token, expiresAt, tokenType: "Bearer", user details }
 - At least one digit
 - At least one special character
 
-**Hashing**: BCrypt with automatic salt generation
+**Hashing Algorithm**: PBKDF2-HMAC-SHA256 (ASP.NET Core Identity PasswordHasher)
+- Automatic salt generation (128-bit salt)
+- 10,000 iterations by default
+- Base64-encoded output containing algorithm version, iteration count, salt, and hash
+- Supports algorithm upgrades via SuccessRehashNeeded result
 
 ### 4. JWT Token Configuration
 
@@ -1106,7 +1110,7 @@ This section provides comprehensive database documentation including entity rela
 | LastName | NVARCHAR(100) | NOT NULL | User's last name (validated, trimmed) |
 | Email | NVARCHAR(255) | NOT NULL, UNIQUE | Email address (Gmail-style regex validated) |
 | PhoneNumber | NVARCHAR(15) | NOT NULL | Phone number (exactly 11 digits) |
-| PasswordHash | NVARCHAR(MAX) | NOT NULL | BCrypt hashed password |
+| PasswordHash | NVARCHAR(MAX) | NOT NULL | PBKDF2-HMAC-SHA256 hashed password (ASP.NET Core Identity) |
 | DateOfBirth | DATE | NOT NULL | Birth date (min age 18 enforced) |
 | Role | INT | NOT NULL | UserRole enum (0=Customer, 1=Admin, 2=Manager) |
 | CurrentAccountNumber | UNIQUEIDENTIFIER | NULL | Reference to current active account |

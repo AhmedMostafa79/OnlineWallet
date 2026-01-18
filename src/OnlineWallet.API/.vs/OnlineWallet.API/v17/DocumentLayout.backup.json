@@ -3,26 +3,44 @@
   "WorkspaceRootPath": "C:\\Users\\J.AHMED\\source\\repos\\C#\\OnlineWallet\\src\\OnlineWallet.API\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{1D2BFD74-8F2F-4225-92BA-EBA1899FA5B6}|..\\OnlineWallet.Application\\OnlineWallet.Application.csproj|c:\\users\\j.ahmed\\source\\repos\\c#\\onlinewallet\\src\\onlinewallet.application\\services\\adminservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E028DD09-23FE-49E5-8788-5BD3F9AD7E72}|..\\OnlineWallet.Tests\\OnlineWallet.Tests.csproj|c:\\users\\j.ahmed\\source\\repos\\c#\\onlinewallet\\src\\onlinewallet.tests\\unittests\\models\\usertests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1D2BFD74-8F2F-4225-92BA-EBA1899FA5B6}|..\\OnlineWallet.Application\\OnlineWallet.Application.csproj|c:\\users\\j.ahmed\\source\\repos\\c#\\onlinewallet\\src\\onlinewallet.application\\services\\accountservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{03A015A6-E2D0-4847-AE18-05F36DD3A00C}|..\\OnlineWallet.Infrastructure\\OnlineWallet.Infrastructure.csproj|c:\\users\\j.ahmed\\source\\repos\\c#\\onlinewallet\\src\\onlinewallet.infrastructure\\caching\\decorators\\cachedusersrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{03A015A6-E2D0-4847-AE18-05F36DD3A00C}|..\\OnlineWallet.Infrastructure\\OnlineWallet.Infrastructure.csproj|c:\\users\\j.ahmed\\source\\repos\\c#\\onlinewallet\\src\\onlinewallet.infrastructure\\repositories\\auditlogsrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1D2BFD74-8F2F-4225-92BA-EBA1899FA5B6}|..\\OnlineWallet.Application\\OnlineWallet.Application.csproj|c:\\users\\j.ahmed\\source\\repos\\c#\\onlinewallet\\src\\onlinewallet.application\\interfaces\\iauditlogservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{1D2BFD74-8F2F-4225-92BA-EBA1899FA5B6}|..\\OnlineWallet.Application\\OnlineWallet.Application.csproj|c:\\users\\j.ahmed\\source\\repos\\c#\\onlinewallet\\src\\onlinewallet.application\\services\\auditlogservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1D2BFD74-8F2F-4225-92BA-EBA1899FA5B6}|..\\OnlineWallet.Application\\OnlineWallet.Application.csproj|c:\\users\\j.ahmed\\source\\repos\\c#\\onlinewallet\\src\\onlinewallet.application\\services\\auditlogservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{1D2BFD74-8F2F-4225-92BA-EBA1899FA5B6}|..\\OnlineWallet.Application\\OnlineWallet.Application.csproj|c:\\users\\j.ahmed\\source\\repos\\c#\\onlinewallet\\src\\onlinewallet.application\\services\\customerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1D2BFD74-8F2F-4225-92BA-EBA1899FA5B6}|..\\OnlineWallet.Application\\OnlineWallet.Application.csproj|c:\\users\\j.ahmed\\source\\repos\\c#\\onlinewallet\\src\\onlinewallet.application\\services\\accountservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{72E2E1AC-C74D-42B5-8A1C-C461FAEAB256}|OnlineWallet.API.csproj|c:\\users\\j.ahmed\\source\\repos\\c#\\onlinewallet\\src\\onlinewallet.api\\controllers\\customercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{72E2E1AC-C74D-42B5-8A1C-C461FAEAB256}|OnlineWallet.API.csproj|solutionrelative:controllers\\customercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1D2BFD74-8F2F-4225-92BA-EBA1899FA5B6}|..\\OnlineWallet.Application\\OnlineWallet.Application.csproj|c:\\users\\j.ahmed\\source\\repos\\c#\\onlinewallet\\src\\onlinewallet.application\\services\\customerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{03A015A6-E2D0-4847-AE18-05F36DD3A00C}|..\\OnlineWallet.Infrastructure\\OnlineWallet.Infrastructure.csproj|c:\\users\\j.ahmed\\source\\repos\\c#\\onlinewallet\\src\\onlinewallet.infrastructure\\repositories\\usersrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{03A015A6-E2D0-4847-AE18-05F36DD3A00C}|..\\OnlineWallet.Infrastructure\\OnlineWallet.Infrastructure.csproj|c:\\users\\j.ahmed\\source\\repos\\c#\\onlinewallet\\src\\onlinewallet.infrastructure\\interfaces\\iunitofwork.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1B8C9EE5-C0CD-4BED-98F5-5AB345D2D175}|..\\OnlineWallet.Domain\\OnlineWallet.Domain.csproj|c:\\users\\j.ahmed\\source\\repos\\c#\\onlinewallet\\src\\onlinewallet.domain\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1B8C9EE5-C0CD-4BED-98F5-5AB345D2D175}|..\\OnlineWallet.Domain\\OnlineWallet.Domain.csproj|c:\\users\\j.ahmed\\source\\repos\\c#\\onlinewallet\\src\\onlinewallet.domain\\models\\auditlog.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1D2BFD74-8F2F-4225-92BA-EBA1899FA5B6}|..\\OnlineWallet.Application\\OnlineWallet.Application.csproj|c:\\users\\j.ahmed\\source\\repos\\c#\\onlinewallet\\src\\onlinewallet.application\\services\\adminservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1D2BFD74-8F2F-4225-92BA-EBA1899FA5B6}|..\\OnlineWallet.Application\\OnlineWallet.Application.csproj|c:\\users\\j.ahmed\\source\\repos\\c#\\onlinewallet\\src\\onlinewallet.application\\interfaces\\iauditlogservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -32,15 +50,93 @@
       "DocumentGroups": [
         {
           "DockedWidth": 55,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 0,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "UserTests.cs",
+              "DocumentMoniker": "C:\\Users\\J.AHMED\\source\\repos\\C#\\OnlineWallet\\src\\OnlineWallet.Tests\\UnitTests\\Models\\UserTests.cs",
+              "RelativeDocumentMoniker": "..\\OnlineWallet.Tests\\UnitTests\\Models\\UserTests.cs",
+              "ToolTip": "C:\\Users\\J.AHMED\\source\\repos\\C#\\OnlineWallet\\src\\OnlineWallet.Tests\\UnitTests\\Models\\UserTests.cs",
+              "RelativeToolTip": "..\\OnlineWallet.Tests\\UnitTests\\Models\\UserTests.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-14T02:29:10.92Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "CachedUsersRepository.cs",
+              "DocumentMoniker": "C:\\Users\\J.AHMED\\source\\repos\\C#\\OnlineWallet\\src\\OnlineWallet.Infrastructure\\Caching\\Decorators\\CachedUsersRepository.cs",
+              "RelativeDocumentMoniker": "..\\OnlineWallet.Infrastructure\\Caching\\Decorators\\CachedUsersRepository.cs",
+              "ToolTip": "C:\\Users\\J.AHMED\\source\\repos\\C#\\OnlineWallet\\src\\OnlineWallet.Infrastructure\\Caching\\Decorators\\CachedUsersRepository.cs",
+              "RelativeToolTip": "..\\OnlineWallet.Infrastructure\\Caching\\Decorators\\CachedUsersRepository.cs",
+              "ViewState": "AgIAAOgAAAAAAAAAAAAAAFoAAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-14T02:25:41.275Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "IUnitOfWork.cs",
+              "DocumentMoniker": "C:\\Users\\J.AHMED\\source\\repos\\C#\\OnlineWallet\\src\\OnlineWallet.Infrastructure\\Interfaces\\IUnitOfWork.cs",
+              "RelativeDocumentMoniker": "..\\OnlineWallet.Infrastructure\\Interfaces\\IUnitOfWork.cs",
+              "ToolTip": "C:\\Users\\J.AHMED\\source\\repos\\C#\\OnlineWallet\\src\\OnlineWallet.Infrastructure\\Interfaces\\IUnitOfWork.cs",
+              "RelativeToolTip": "..\\OnlineWallet.Infrastructure\\Interfaces\\IUnitOfWork.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAAA8AAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-14T01:57:09.886Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "UsersRepository.cs",
+              "DocumentMoniker": "C:\\Users\\J.AHMED\\source\\repos\\C#\\OnlineWallet\\src\\OnlineWallet.Infrastructure\\Repositories\\UsersRepository.cs",
+              "RelativeDocumentMoniker": "..\\OnlineWallet.Infrastructure\\Repositories\\UsersRepository.cs",
+              "ToolTip": "C:\\Users\\J.AHMED\\source\\repos\\C#\\OnlineWallet\\src\\OnlineWallet.Infrastructure\\Repositories\\UsersRepository.cs",
+              "RelativeToolTip": "..\\OnlineWallet.Infrastructure\\Repositories\\UsersRepository.cs",
+              "ViewState": "AgIAACsAAAAAAAAAAAA1wD8AAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-14T01:56:23.892Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "AuditLog.cs",
+              "DocumentMoniker": "C:\\Users\\J.AHMED\\source\\repos\\C#\\OnlineWallet\\src\\OnlineWallet.Domain\\Models\\AuditLog.cs",
+              "RelativeDocumentMoniker": "..\\OnlineWallet.Domain\\Models\\AuditLog.cs",
+              "ToolTip": "C:\\Users\\J.AHMED\\source\\repos\\C#\\OnlineWallet\\src\\OnlineWallet.Domain\\Models\\AuditLog.cs",
+              "RelativeToolTip": "..\\OnlineWallet.Domain\\Models\\AuditLog.cs",
+              "ViewState": "AgIAADMAAAAAAAAAAAASwEkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-14T01:41:15.663Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "User.cs",
+              "DocumentMoniker": "C:\\Users\\J.AHMED\\source\\repos\\C#\\OnlineWallet\\src\\OnlineWallet.Domain\\Models\\User.cs",
+              "RelativeDocumentMoniker": "..\\OnlineWallet.Domain\\Models\\User.cs",
+              "ToolTip": "C:\\Users\\J.AHMED\\source\\repos\\C#\\OnlineWallet\\src\\OnlineWallet.Domain\\Models\\User.cs",
+              "RelativeToolTip": "..\\OnlineWallet.Domain\\Models\\User.cs",
+              "ViewState": "AgIAAJkAAAAAAAAAAAA+wKMAAABNAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-14T01:26:39.154Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{e1b7d1f8-9b3c-49b1-8f4f-bfc63a88835d}"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 12,
               "Title": "IAuditLogService.cs",
               "DocumentMoniker": "C:\\Users\\J.AHMED\\source\\repos\\C#\\OnlineWallet\\src\\OnlineWallet.Application\\Interfaces\\IAuditLogService.cs",
               "RelativeDocumentMoniker": "..\\OnlineWallet.Application\\Interfaces\\IAuditLogService.cs",
@@ -48,31 +144,30 @@
               "RelativeToolTip": "..\\OnlineWallet.Application\\Interfaces\\IAuditLogService.cs",
               "ViewState": "AgIAABIAAAAAAAAAAAAewB4AAABHAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-06T21:01:27.311Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-06T21:01:27.311Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 11,
               "Title": "AdminService.cs",
               "DocumentMoniker": "C:\\Users\\J.AHMED\\source\\repos\\C#\\OnlineWallet\\src\\OnlineWallet.Application\\Services\\AdminService.cs",
               "RelativeDocumentMoniker": "..\\OnlineWallet.Application\\Services\\AdminService.cs",
               "ToolTip": "C:\\Users\\J.AHMED\\source\\repos\\C#\\OnlineWallet\\src\\OnlineWallet.Application\\Services\\AdminService.cs",
               "RelativeToolTip": "..\\OnlineWallet.Application\\Services\\AdminService.cs",
-              "ViewState": "AgIAAO8BAAAAAAAAAAAswAYCAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYCAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-01-06T18:11:09.434Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 3,
               "Title": "AuditLogService.cs",
               "DocumentMoniker": "C:\\Users\\J.AHMED\\source\\repos\\C#\\OnlineWallet\\src\\OnlineWallet.Application\\Services\\AuditLogService.cs",
               "RelativeDocumentMoniker": "..\\OnlineWallet.Application\\Services\\AuditLogService.cs",
               "ToolTip": "C:\\Users\\J.AHMED\\source\\repos\\C#\\OnlineWallet\\src\\OnlineWallet.Application\\Services\\AuditLogService.cs",
               "RelativeToolTip": "..\\OnlineWallet.Application\\Services\\AuditLogService.cs",
-              "ViewState": "AgIAADQAAAAAAAAAAAA1wD4AAABMAAAAAAAAAA==",
+              "ViewState": "AgIAAH8AAAAAAAAAAAAAAIwAAAASAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-01-06T18:10:02.203Z",
               "EditorCaption": ""
@@ -85,46 +180,46 @@
               "RelativeDocumentMoniker": "..\\OnlineWallet.Infrastructure\\Repositories\\AuditLogsRepository.cs",
               "ToolTip": "C:\\Users\\J.AHMED\\source\\repos\\C#\\OnlineWallet\\src\\OnlineWallet.Infrastructure\\Repositories\\AuditLogsRepository.cs",
               "RelativeToolTip": "..\\OnlineWallet.Infrastructure\\Repositories\\AuditLogsRepository.cs",
-              "ViewState": "AgIAAA8AAAAAAAAAAAAAAEUAAAA7AAAAAAAAAA==",
+              "ViewState": "AgIAAGMAAAAAAAAAAAAiwHEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-01-06T18:05:25.945Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "CustomerController.cs",
               "DocumentMoniker": "C:\\Users\\J.AHMED\\source\\repos\\C#\\OnlineWallet\\src\\OnlineWallet.API\\Controllers\\CustomerController.cs",
               "RelativeDocumentMoniker": "Controllers\\CustomerController.cs",
               "ToolTip": "C:\\Users\\J.AHMED\\source\\repos\\C#\\OnlineWallet\\src\\OnlineWallet.API\\Controllers\\CustomerController.cs",
               "RelativeToolTip": "Controllers\\CustomerController.cs",
-              "ViewState": "AgIAAFQAAAAAAAAAAAAcwGYAAABNAAAAAAAAAA==",
+              "ViewState": "AgIAAIAAAAAAAAAAAAA5wJEAAAAPAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-01-06T16:00:00.564Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 5,
               "Title": "AccountService.cs",
               "DocumentMoniker": "C:\\Users\\J.AHMED\\source\\repos\\C#\\OnlineWallet\\src\\OnlineWallet.Application\\Services\\AccountService.cs",
               "RelativeDocumentMoniker": "..\\OnlineWallet.Application\\Services\\AccountService.cs",
               "ToolTip": "C:\\Users\\J.AHMED\\source\\repos\\C#\\OnlineWallet\\src\\OnlineWallet.Application\\Services\\AccountService.cs",
               "RelativeToolTip": "..\\OnlineWallet.Application\\Services\\AccountService.cs",
-              "ViewState": "AgIAADQBAAAAAAAAAAAewEIBAAAWAAAAAAAAAA==",
+              "ViewState": "AgIAACkAAAAAAAAAAAAIwC4AAAAwAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-01-06T14:44:11.251Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 4,
               "Title": "CustomerService.cs",
               "DocumentMoniker": "C:\\Users\\J.AHMED\\source\\repos\\C#\\OnlineWallet\\src\\OnlineWallet.Application\\Services\\CustomerService.cs",
               "RelativeDocumentMoniker": "..\\OnlineWallet.Application\\Services\\CustomerService.cs",
               "ToolTip": "C:\\Users\\J.AHMED\\source\\repos\\C#\\OnlineWallet\\src\\OnlineWallet.Application\\Services\\CustomerService.cs",
               "RelativeToolTip": "..\\OnlineWallet.Application\\Services\\CustomerService.cs",
-              "ViewState": "AgIAADMCAAAAAAAAAAAswBECAABCAAAAAAAAAA==",
+              "ViewState": "AgIAANoBAAAAAAAAAAAAAOYBAAApAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-01-06T14:41:34.726Z",
               "EditorCaption": ""

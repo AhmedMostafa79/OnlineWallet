@@ -20,3 +20,4 @@ C:\Users\J.AHMED\source\repos\C#\OnlineWallet\src\OnlineWallet.Domain\obj\Debug\
 C:\Users\J.AHMED\source\repos\C#\OnlineWallet\src\OnlineWallet.Domain\obj\Debug\net8.0\refint\OnlineWallet.Domain.dll
 C:\Users\J.AHMED\source\repos\C#\OnlineWallet\src\OnlineWallet.Domain\obj\Debug\net8.0\OnlineWallet.Domain.pdb
 C:\Users\J.AHMED\source\repos\C#\OnlineWallet\src\OnlineWallet.Domain\obj\Debug\net8.0\ref\OnlineWallet.Domain.dll
+C:\Users\J.AHMED\source\repos\C#\OnlineWallet\src\OnlineWallet.Domain\obj\Debug\net8.0\OnlineWallet.Domain.sourcelink.json

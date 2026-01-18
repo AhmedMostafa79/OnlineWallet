@@ -32,3 +32,4 @@ C:\Users\J.AHMED\source\repos\C#\OnlineWallet\src\OnlineWallet.Application\obj\D
 C:\Users\J.AHMED\source\repos\C#\OnlineWallet\src\OnlineWallet.Application\obj\Debug\net8.0\refint\OnlineWallet.Application.dll
 C:\Users\J.AHMED\source\repos\C#\OnlineWallet\src\OnlineWallet.Application\obj\Debug\net8.0\OnlineWallet.Application.pdb
 C:\Users\J.AHMED\source\repos\C#\OnlineWallet\src\OnlineWallet.Application\obj\Debug\net8.0\ref\OnlineWallet.Application.dll
+C:\Users\J.AHMED\source\repos\C#\OnlineWallet\src\OnlineWallet.Application\obj\Debug\net8.0\OnlineWallet.Application.sourcelink.json

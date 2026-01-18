@@ -32,3 +32,4 @@ C:\Users\J.AHMED\source\repos\C#\OnlineWallet\src\OnlineWallet.Infrastructure\ob
 C:\Users\J.AHMED\source\repos\C#\OnlineWallet\src\OnlineWallet.Infrastructure\obj\Debug\net8.0\OnlineWallet.Infrastructure.pdb
 C:\Users\J.AHMED\source\repos\C#\OnlineWallet\src\OnlineWallet.Infrastructure\obj\Debug\net8.0\OnlineWallet.Infrastructure.genruntimeconfig.cache
 C:\Users\J.AHMED\source\repos\C#\OnlineWallet\src\OnlineWallet.Infrastructure\obj\Debug\net8.0\ref\OnlineWallet.Infrastructure.dll
+C:\Users\J.AHMED\source\repos\C#\OnlineWallet\src\OnlineWallet.Infrastructure\obj\Debug\net8.0\OnlineWallet.Infrastructure.sourcelink.json
