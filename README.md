@@ -1567,7 +1567,7 @@ Based on local development testing:
 
 ## 👨‍💻 Author & Contact
 
-**Ahmed Mustafa** - Self-Taught .NET Backend Developer
+**Ahmed Khater** - Self-Taught .NET Backend Developer
 
 
 *This enterprise-grade financial system was built through self-directed learning using DeepSeek and YouTube resources, demonstrating the ability to independently master complex software engineering concepts.*
