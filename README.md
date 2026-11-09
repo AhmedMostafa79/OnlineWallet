@@ -1,6 +1,6 @@
 # 🏦 OnlineWallet - Enterprise Financial Management System
 
-A production-ready, enterprise-grade online wallet management system built with **ASP.NET Core 8.0**. This project demonstrates advanced software engineering practices including **Clean Architecture**, **Domain-Driven Design (DDD)**, **Repository & Unit of Work patterns**, **Redis caching with Decorator Pattern**, **comprehensive security measures**, **transactional integrity**, and **containerized deployment** for financial operations.
+An online wallet management system built with **ASP.NET Core 8.0**. This project demonstrates advanced software engineering practices including **Clean Architecture**, **Domain-Driven Design (DDD)**, **Repository & Unit of Work patterns**, **Redis caching with Decorator Pattern**, **comprehensive security measures**, **transactional integrity**, and **containerized deployment** for financial operations.
 
 [![.NET](https://img.shields.io/badge/.NET-8.0-purple)](https://dotnet.microsoft.com/)
 [![C#](https://img.shields.io/badge/C%23-12.0-blue)](https://docs.microsoft.com/en-us/dotnet/csharp/)
